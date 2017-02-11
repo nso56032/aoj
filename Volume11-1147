@@ -1,0 +1,20 @@
+nums = []
+
+while line = gets
+    nums << line.chomp.to_i
+end
+
+while nums != [0]
+
+    score = []
+    
+    n = nums.shift 
+    
+    n.times{ 
+        a = nums.shift
+        score << a
+    } 
+    
+    p (score.inject(:+) - score.max - score.min)/(score.size-2)
+    
+end 
