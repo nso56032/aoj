@@ -1,0 +1,21 @@
+while (s = gets.chomp.split(" ").map(&:to_i)) != [0,0]
+
+n = s[0]
+r = s[1]
+
+#p n,r
+
+    a = (1..n).to_a
+    a = a.reverse
+    
+    r.times{
+        s = gets.chomp.split(" ").map(&:to_i)
+        b = a.shift(s[0]-1)
+        c = a.shift(s[1])
+        a = [c,b,a].flatten
+        #p a 
+    }
+
+    puts a[0]
+    
+end 
